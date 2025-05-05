@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EcoInsightTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bff9c2a27f9303372fc994c9bec2d48170685962")]
 [assembly: System.Reflection.AssemblyProductAttribute("EcoInsightTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EcoInsightTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

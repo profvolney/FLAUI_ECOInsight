@@ -106,3 +106,4 @@ C:\Users\jason\Desktop\EcoInsightTest\obj\Debug\net9.0\EcoInsightTest.genruntime
 C:\Users\jason\Desktop\EcoInsightTest\obj\Debug\net9.0\ref\EcoInsightTest.dll
 C:\Users\jason\Desktop\EcoInsightTest\bin\Debug\net9.0\Accessibility.dll
 C:\Users\jason\Desktop\EcoInsightTest\bin\Debug\net9.0\Accessibility.xml
+C:\Users\jason\Desktop\EcoInsightTest\obj\Debug\net9.0\EcoInsightTest.sourcelink.json

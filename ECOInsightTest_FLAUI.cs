@@ -33,17 +33,42 @@ namespace EcoInsightTest
 #pragma warning restore CS8602 // Dereference of a possibly null reference.
 
             using(var automation = new UIA3Automation())
-            {
-                Window? home = app.GetMainWindow(automation);
-                while (home.Title == "Home")
-                {
-                    // Wait for the window to be ready
-                    System.Threading.Thread.Sleep(1000);
-                    home = app.GetMainWindow(automation);
+            {  
+                System.Threading.Thread.Sleep(1000);
+                Window? home = app.GetAllTopLevelWindows(automation)[0];
 
-                    ConditionFactory cf1 = new ConditionFactory(new UIA3PropertyLibrary());
-                    home.FindFirstDescendant(cf1.ByAutomationId("btnAdmUsuario")).AsButton().Click();
-                };
+                ConditionFactory cf1 = new ConditionFactory(new UIA3PropertyLibrary());
+                home.FindFirstDescendant(cf1.ByAutomationId("btnAdm")).AsButton().Click();
+
+                System.Threading.Thread.Sleep(1000);
+                Window? sucesso = app.GetAllTopLevelWindows(automation)[0];
+                sucesso.FindFirstDescendant(cf1.ByAutomationId("2")).AsButton().Click();
+                
+                System.Threading.Thread.Sleep(1000);
+                sucesso.FindFirstDescendant(cf1.ByClassName("Teste OK"));
+                sucesso.FindFirstDescendant(cf1.ByAutomationId("2")).AsButton().Click();
+                
+                System.Threading.Thread.Sleep(1000);
+                Window? admin = app.GetAllTopLevelWindows(automation)[0];
+                
+                System.Threading.Thread.Sleep(1000);
+                admin.FindFirstDescendant(cf1.ByClassName("      Destaques"));
+
+                System.Threading.Thread.Sleep(1000);
+                admin.FindFirstDescendant(cf1.ByAutomationId("btnAdmDestaques")).AsButton().Click();
+
+                System.Threading.Thread.Sleep(1000);
+                admin.FindFirstDescendant(cf1.ByAutomationId("btnAdmRelatorio")).AsButton().Click();
+                
+                System.Threading.Thread.Sleep(1000);
+                admin.FindFirstDescendant(cf1.ByAutomationId("btnAdmDescarte")).AsButton().Click();
+
+                System.Threading.Thread.Sleep(1000);
+                admin.FindFirstDescendant(cf1.ByAutomationId("btnAdmMinhocario")).AsButton().Click();
+
+                System.Threading.Thread.Sleep(2000);
+                admin.FindFirstDescendant(cf1.ByAutomationId("btnSair")).AsButton().Click();
+
             }          
         }
     }
